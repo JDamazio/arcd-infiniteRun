@@ -1,0 +1,81 @@
+/* @import url(./reset.css); */
+:root{
+    --color01:#0D0D0D;
+    --color02:#222A59;
+    --color03:#262473;
+    --color04:#7E49F2;
+    --color05:#3F2140;
+}
+
+/* -------------------- */
+body{
+    background-color:var(--color01);
+    display: flex;
+    justify-content: center;
+
+}
+.game{
+    margin: 1rem;
+    background-color: var(--color02);
+    width: 80%;
+    margin: 0;
+    padding: 0;
+}
+/* -------------------- */
+
+
+.game__board{
+width: 80%;
+height: 500px;
+border: 5px solid var(--color05);
+margin: auto;
+position: relative;
+overflow: hidden;
+}
+
+.obstacle{
+    position: absolute;
+    bottom: 0;
+    width: 5rem;
+    right: -5rem;
+    animation: obsAnimt  2.5s infinite linear;
+}
+
+.character{
+    position: absolute;
+    bottom: 0;
+    width: 12rem;
+}
+
+.jump{
+    animation: charAnimt 1s ease-out;
+
+}
+
+@keyframes obsAnimt {
+    from{
+        right: -10%;
+    }
+    to{
+        right: 100%;
+    }
+    
+}
+
+@keyframes charAnimt{
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 10rem;
+    }
+    50%{
+        bottom: 10rem;
+    }
+    60%{
+        bottom: 10rem;
+    }
+    100%{
+        bottom: 0;
+    }
+}
