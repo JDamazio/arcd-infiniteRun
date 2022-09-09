@@ -1,4 +1,6 @@
-/* @import url(./reset.css); */
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Uncial+Antiqua&display=swap');
 :root{
     --color01:#0D0D0D;
     --color02:#222A59;
@@ -10,13 +12,45 @@
 /* -------------------- */
 body{
     background-color:var(--color01);
+}
+
+h1 {
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 4rem;
+}
+h2{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    margin: .5rem;
+}
+h3{
+    font-family:'Press Start 2P', cursive;;
+    font-size: 1rem;
+    padding: 1rem;
+}
+.arcade{
+    background-color: var(--color05);
+    height: 40rem;
+    margin: 2rem 1rem 0rem 1rem;    
+    border-radius: 20px 20px 0px 0px;
     display: flex;
     justify-content: center;
-
+    flex-direction: column;
+    align-items: center;
 }
+.arcade__menu{
+    background-color: var(--color05);
+    height: 15rem;
+    margin: 0rem 1rem 0rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .game{
     margin: 1rem;
-    background-color: var(--color02);
     width: 80%;
     margin: 0;
     padding: 0;
@@ -25,12 +59,14 @@ body{
 
 
 .game__board{
-width: 80%;
-height: 500px;
-border: 5px solid var(--color05);
-margin: auto;
-position: relative;
-overflow: hidden;
+    
+    background-color: var(--color02);
+    height: 500px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border: var(--color01) solid 10px;
+    border-radius: 10px;
 }
 
 .obstacle{
@@ -78,4 +114,46 @@ overflow: hidden;
     100%{
         bottom: 0;
     }
+}
+
+/* Fake bnt */
+#fakeBnt{
+display: flex;
+}
+
+#p1 ul li{
+    border-radius: 100%;
+}
+#p2 ul li{
+    border-radius: 100%;
+}
+
+ul{
+    display: flex;
+}
+ul *{
+    padding: 1rem;
+    margin: .2rem;
+    border: #0D0D0D solid 5px;
+    box-shadow: 1px 1px 10px #0D0D0D;
+}
+
+
+.RED{
+    background-color: red;
+}
+.BLUE{
+    background-color: blue;
+}
+.YELLOW{
+    background-color: yellow;
+}
+.WHITE{
+    background-color: WHITE;
+}
+.GREEN{
+    background-color: GREEN;
+}
+.BLACK{
+    background-color: BLACK;
 }

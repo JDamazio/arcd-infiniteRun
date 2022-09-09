@@ -37,3 +37,10 @@ const loop = setInterval(() => {
 
 },10)
 document.addEventListener('keydown', jump)
+
+
+// Insert coin
+
+document.querySelector('#reload').addEventListener('click',() =>{
+    window.location.reload(true);
+})
